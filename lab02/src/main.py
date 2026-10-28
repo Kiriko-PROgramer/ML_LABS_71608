@@ -159,7 +159,7 @@ def gradient_check(X_batch, y_batch, num_checks=10, eps=1e-5):
 
 gradient_check(X_train[:16], y_train[:16])
 
-os.makedirs("results", exist_ok=True)
+os.makedirs("../results", exist_ok=True)
 widths = [16, 64]
 learning_rates = [0.001, 0.01, 0.1]
 epochs = 50
