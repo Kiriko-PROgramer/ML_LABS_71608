@@ -1,0 +1,17 @@
+pipeline_name: Adult Income Prediction Pipeline
+random_state: 42
+split_ratio: "70/30 (stratified on target)"
+features:
+  numeric: [age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week]
+  categorical: [workclass, education, marital-status, occupation, relationship, race, sex, native-country]
+  engineered: [capital_net, hours_per_age]
+processing:
+  imputation:
+    numeric: "median (fitted on train only)"
+    categorical: "most_frequent (fitted on train only)"
+  outliers: "clipped to 1st and 99th percentile (bounds calculated on train only)"
+  duplicates: "dropped exact duplicates from train set only"
+results:
+  baseline_accuracy: 0.8578
+  baseline_f1: 0.6696
+  processed_test_hash: d17a63510e8868c1fe7bf3ccfdd331266f6dd8a2a3138542671398fca2d2ded4
