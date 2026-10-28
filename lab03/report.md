@@ -30,7 +30,7 @@ While hand calculations isolate the primary matrix multiplications of a single l
 
 ## 3. Architecture Trade-offs and Access Patterns
 
-Based on the generated `architecture_tradeoffs.png` plots, we can observe distinct trade-offs between accuracy, parameter count, and latency.
+Based on the generated `results/architecture_tradeoffs.png` plots, we can observe distinct trade-offs between accuracy, parameter count, and latency.
 
 ### Accuracy vs. Parameters
 *   **CNN:** Achieved the highest accuracy (89.11%) with the **lowest** parameter count. This is due to *weight sharing* and *local receptive fields*. The CNN efficiently extracts spatial hierarchies without needing a parameter for every pixel combination.
