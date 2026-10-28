@@ -90,14 +90,14 @@ def main():
     acc, f1 = accuracy_score(y_test, pipe_eng.predict(X_test_eng)), f1_score(y_test, pipe_eng.predict(X_test_eng))
     print(f"\nModel Performance (With Eng. Features):\nAccuracy: {acc:.4f} | F1: {f1:.4f}")
 
-    joblib.dump(preprocessor, 'preprocessor.joblib')
+    joblib.dump(preprocessor, '../results/preprocessor.joblib')
 
     print("\n5. Hashing Processed Dataset...")
     processed_test = preprocessor.transform(X_test_eng)
-    pd.DataFrame(processed_test).to_csv('processed_test.csv', index=False)
+    pd.DataFrame(processed_test).to_csv('../results/processed_test.csv', index=False)
 
     hasher = hashlib.sha256()
-    with open('processed_test.csv', 'rb') as f:
+    with open('../results/processed_test.csv', 'rb') as f:
         hasher.update(f.read())
     print(f"Processed Data SHA-256 Hash: {hasher.hexdigest()}")
 
