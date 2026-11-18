@@ -1,0 +1,3 @@
+Best num_workers: 8
+Best data throughput: 43942.70 samples/s
+If throughput stops improving or decreases as workers increase, worker startup, IPC, transform overhead, or CPU contention is the bottleneck.

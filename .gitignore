@@ -1,0 +1,9 @@
+.venv/
+.idea/
+**/.idea/
+WelcomeScreen/
+**/data/
+lab06/src/lab6_outputs_fast/
+lab06/src/mlruns/
+__pycache__/
+*.pyc
