@@ -5,5 +5,8 @@ WelcomeScreen/
 **/data/
 lab06/src/lab6_outputs_fast/
 lab06/src/mlruns/
+lab07/data/
+lab07/results/*.pt
 __pycache__/
 *.pyc
+

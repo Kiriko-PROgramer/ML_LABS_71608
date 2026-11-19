@@ -1,0 +1,2 @@
+device,params,test_accuracy,size_mb,latency_ms,macs_m
+cpu,1044490,91.51,3.988557815551758,1.302900000155205,58.83264

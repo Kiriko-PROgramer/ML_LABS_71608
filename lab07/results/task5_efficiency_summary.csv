@@ -1,0 +1,5 @@
+model,data,model_efficiency,accuracy,params,size_mb,latency_ms,macs_m,energy_proxy_rel
+baseline_teacher,full Fashion-MNIST,dense ~1M CNN,91.51,1044490,3.988557815551758,1.302900000155205,58.83264,1.0
+best_global_s0.25,full Fashion-MNIST,unstructured sparse,92.25,1044490,18.32918357849121,1.2322999996285944,58.83264,0.9458131855720312
+best_structured_r0.10,full Fashion-MNIST,physically smaller channels,92.12,917469,3.504030227661133,1.2011999997412204,47.890156,0.7504679576027209
+student_distilled,full Fashion-MNIST + teacher logits,<100k student,87.72,86246,0.33272552490234375,0.28649999967456097,1.982152,0.007408531977023917
